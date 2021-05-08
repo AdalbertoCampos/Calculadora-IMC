@@ -4,48 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="ícone.png">
+    <link rel="stylesheet" href="IMC.css">
     <title>Cálculo de IMC</title>
-    <style>
-        body {
-            background: rgb(117, 117, 250);
-        }
-        h1 {
-            color: white;
-            font-size: 50px;
-            text-align: center;
-            font-family: Playbill;
-            letter-spacing: 2px;
-        }
-        section {
-            font-family: Arial;
-            font-size: 40px;
-            color: white;
-            background:rgb(99, 226, 248);
-            border-radius: 10px;
-            padding: 15px;
-            width: 500px;
-            height: 400px;
-            margin: auto;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.308);
-        }
-        input {
-            height: 30px;
-            border-style: solid;
-            border-color: rgb(117, 117, 250);
-            border-width: 3px;
-            text-align: center;
-        }
-        input[type = "submit"] {
-            margin-left: 205px;
-            height: 60px;
-            width: 100px;
-            cursor: pointer;
-            font-size: 20px;
-            letter-spacing: 1.5px;
-            color:rgb(117, 117, 250);
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <h1>Olá! Calcule seu IMC (Índice de Massa Corporal) gratuitamente!</h1>
@@ -60,30 +20,8 @@
 
     </div>
 </section>
-<script>
-    function resultado() {
-        var peso = document.getElementsByTagName('input')[0].value
-        var altura = document.getElementsByTagName('input')[1].value
-        var botao = document.getElementsByTagName('input')[2]
-        var calc = peso / (altura * altura)
-        var res = calc.toFixed(1)
-        var show1 = document.getElementsByTagName('div')[0]
-        var show2 = document.getElementsByTagName('div')[1]
-        show1.innerHTML = `Seu IMC é igual a ${res}`
-        if (res < 18.5) {
-            show2.innerHTML = 'Magreza!'
-        } else if (res < 24.9) {
-            show2.innerHTML = 'Normal!'
-        } else if (res < 30) {
-            show2.innerHTML = 'Sobrepeso!'
-        } else if (res > 30) {
-            show2.innerHTML = 'Obesidade!'
-        } else {
-            alert('Favor informar os valores.')
-            show1.innerHTML = ""
-            show2.innerHTML = ""
-        }
-    }
-</script>
+
+<script src="IMC.js"></script>
+
 </body>
 </html>
